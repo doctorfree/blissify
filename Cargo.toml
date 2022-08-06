@@ -9,6 +9,18 @@ repository = "https://github.com/Polochon-street/blissify-rs"
 keywords = ["audio", "song", "similarity", "playlist"]
 readme = "README.md"
 
+[package.metadata.deb]
+maintainer = "Ronald Record <ronaldrecord@gmail.com>"
+copyright = "2022, Ronald Record <ronaldrecord@gmail.com>"
+extended-description = """Debian packaging for the Blissify Rust project."""
+depends = "$auto"
+section = "utility"
+priority = "optional"
+assets = [
+    ["target/release/blissify", "usr/bin/", "755"],
+    ["README.md", "usr/share/doc/blissify/README.md", "644"],
+]
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
